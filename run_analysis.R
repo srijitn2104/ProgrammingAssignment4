@@ -103,13 +103,13 @@ data_set_std <- mergedDataSet[,3:length(mergedDataSet)] %>% sapply(sd)
 ### descriptive name for activity set in merged data set
 
 activity_labels <- read.table("./activity_labels.txt")
-activityMergedData <- mergedDataSet
-activityMergedData$activity[mergedDataSet$activity==1] <- activity_labels[1,2]
-activityMergedData$activity[mergedDataSet$activity==2] <- activity_labels[2,2]
-activityMergedData$activity[mergedDataSet$activity==3] <- activity_labels[3,2]
-activityMergedData$activity[mergedDataSet$activity==4] <- activity_labels[4,2]
-activityMergedData$activity[mergedDataSet$activity==5] <- activity_labels[5,2]
-activityMergedData$activity[mergedDataSet$activity==6] <- activity_labels[6,2]
+#activityMergedData <- mergedDataSet
+mergedDataSet$activity[mergedDataSet$activity==1] <- activity_labels[1,2]
+mergedDataSet$activity[mergedDataSet$activity==2] <- activity_labels[2,2]
+mergedDataSet$activity[mergedDataSet$activity==3] <- activity_labels[3,2]
+mergedDataSet$activity[mergedDataSet$activity==4] <- activity_labels[4,2]
+mergedDataSet$activity[mergedDataSet$activity==5] <- activity_labels[5,2]
+mergedDataSet$activity[mergedDataSet$activity==6] <- activity_labels[6,2]
 
 
 ## proper descriptive name for variable name for feature set
