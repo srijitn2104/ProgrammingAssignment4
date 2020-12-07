@@ -134,4 +134,5 @@ dataMelt <- melt(mergedDataSet,id=c("subject","activity"),measure.vars = colMerg
 
 avgTidySet <- dcast(dataMelt, subject+activity ~ variable,mean)
 
+print(avgTidySet)
 
